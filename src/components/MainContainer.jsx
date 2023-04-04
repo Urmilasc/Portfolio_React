@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 
 import ReactLogo from './canvas/ReactLogo'
+import StarsAnimated from './StarsAnimated'
 
 const MainContainer = () => {
   // Canvas BG color
@@ -18,6 +19,7 @@ const MainContainer = () => {
       <pointLight intensity={2} color={0x61dbfb} position={[0, 5, 5]} />
       <spotLight intensity={1} color={0x61dbfb} position={(-20, 50, 10)} />
       <OrbitControls />
+      <StarsAnimated />
       <ReactLogo />
     </Canvas>
   )
