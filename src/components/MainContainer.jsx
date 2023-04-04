@@ -6,6 +6,7 @@ import ReactLogo from './canvas/ReactLogo'
 import StarsAnimated from './StarsAnimated'
 import Hero from './Hero'
 import About from './About'
+import Projects from './Projects'
 
 const MainContainer = () => {
   // Canvas BG color
@@ -30,6 +31,7 @@ const MainContainer = () => {
       <Loader />
       <Hero />
       <About />
+      <Projects />
     </>
   )
 }
