@@ -3,6 +3,8 @@ import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
 const Hero = () => {
+  const isMobile = window.innerWidth <= 767
+  const delayTime = isMobile ? 2.8 : 1.8
   const h1variants = {
     visible: {
       opacity: 1,
@@ -12,7 +14,7 @@ const Hero = () => {
         bounce: 0.5,
         stiffness: 100,
         duration: 1,
-        delay: 3,
+        delay: delayTime,
       },
     },
     hidden: { opacity: 0, scale: 0 },
@@ -26,7 +28,7 @@ const Hero = () => {
         bounce: 0.5,
         stiffness: 100,
         duration: 0.8,
-        delay: 3.5,
+        delay: delayTime + 0.5,
       },
     },
     hidden: { opacity: 0, scale: 0 },
@@ -63,6 +65,13 @@ const Hero = () => {
           className=' mt-8 text-3xl w-2/3 text-center'>
           I'm a Full Stack 3D React Developer
         </motion.h2>
+      </div>
+      <div className='absolute flex flex-col bottom-[13%] left-[50%] translate-x-[-50%]'>
+        <div className='slide-bottom'>
+          <div className='down-arrow'></div>
+          <div className='down-arrow'></div>
+          <div className='down-arrow'></div>
+        </div>
       </div>
     </section>
   )
