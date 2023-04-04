@@ -1,1 +1,1 @@
-Lesson 6 - Final
+Lesson 7 - Final
