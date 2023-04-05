@@ -7,6 +7,7 @@ import StarsAnimated from './StarsAnimated'
 import Hero from './Hero'
 import About from './About'
 import Projects from './Projects'
+import WorkExperience from './WorkExperience'
 
 const MainContainer = () => {
   // Canvas BG color
@@ -32,6 +33,7 @@ const MainContainer = () => {
       <Hero />
       <About />
       <Projects />
+      <WorkExperience />
     </>
   )
 }

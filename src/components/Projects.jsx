@@ -90,8 +90,63 @@ const Projects = () => {
           jects
         </h1>
         <p className='mt-5'>Swipe or drag the items</p>
-        <div className='w-full sm:w-3/4 lg:w-1/2 xl:w-1/3 my-10 '>
-          <Card />
+        <div className='w-full h-screen sm:w-3/4 lg:w-1/2 xl:w-1/3 my-10 '>
+          <Swiper
+            grabCursor={true}
+            centeredSlides={true}
+            // Responsive breakpoints
+            breakpoints={{
+              // when window width is >=
+              1: {
+                slidesPerView: 1.3,
+                spaceBetween: 120,
+              },
+              400: {
+                slidesPerView: 1.3,
+                spaceBetween: 200,
+              },
+              1024: {
+                slidesPerView: 1.3,
+                spaceBetween: 175,
+              },
+              1280: {
+                slidesPerView: 1.5,
+                spaceBetween: 150,
+              },
+              1580: {
+                slidesPerView: 1.5,
+                spaceBetween: 175,
+              },
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            speed={2000}
+            loop={true}
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 200,
+              modifier: 3,
+              slideShadows: true,
+            }}
+            autoHeight={true}
+            resizeObserver={true}
+            modules={[EffectCoverflow, Autoplay]}>
+            {slides.map((slide) => (
+              <SwiperSlide key={slide.id}>
+                <Card
+                  imageSrc={slide.imageSrc}
+                  projectName={slide.projectName}
+                  projectLink={slide.projectLink}
+                  projectDescription={slide.projectDescription}
+                  githubLink={slide.githubLink}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
