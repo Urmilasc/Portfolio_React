@@ -8,6 +8,7 @@ import Hero from './Hero'
 import About from './About'
 import Projects from './Projects'
 import WorkExperience from './WorkExperience'
+import Contact from './Contact'
 
 const MainContainer = () => {
   // Canvas BG color
@@ -34,6 +35,7 @@ const MainContainer = () => {
       <About />
       <Projects />
       <WorkExperience />
+      <Contact />
     </>
   )
 }
