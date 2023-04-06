@@ -2,7 +2,7 @@ import { useMemo, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 const actionNames = [
-  'SphereAction',
+  // 'SphereAction',
   'TorusAction1',
   'TorusAction2',
   'TorusAction3',
