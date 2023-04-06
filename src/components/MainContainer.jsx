@@ -9,6 +9,7 @@ import About from './About'
 import Projects from './Projects'
 import WorkExperience from './WorkExperience'
 import Contact from './Contact'
+import Earth from './canvas/Earth'
 
 const MainContainer = () => {
   // Canvas BG color
@@ -28,6 +29,7 @@ const MainContainer = () => {
         <StarsAnimated />
         <Suspense fallback={null}>
           <ReactLogo />
+          <Earth />
         </Suspense>
       </Canvas>
       <Loader />
