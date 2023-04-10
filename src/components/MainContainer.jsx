@@ -1,5 +1,5 @@
 import '../index.css'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Loader } from '@react-three/drei'
 import ReactLogo from './canvas/ReactLogo'
@@ -12,6 +12,12 @@ import Contact from './Contact'
 import Earth from './canvas/Earth'
 
 const MainContainer = () => {
+  // Loading Screen State
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  window.onload = () => {
+    setIsLoaded(true)
+  }
   // Canvas BG color
   const bgColor = ({ gl }) => {
     gl.setClearColor('#000000', 1)
@@ -33,7 +39,7 @@ const MainContainer = () => {
         </Suspense>
       </Canvas>
       <Loader />
-      <Hero />
+      <Hero isLoaded={isLoaded} />
       <About />
       <Projects />
       <WorkExperience />
