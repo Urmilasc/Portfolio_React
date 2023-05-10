@@ -2,9 +2,7 @@ import { useAnimation, motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
-const Hero = (props) => {
-  const { isLoaded } = props
-
+const Hero = ({ isLoaded }) => {
   const h1variants = {
     visible: {
       opacity: 1,
@@ -38,10 +36,10 @@ const Hero = (props) => {
   const [ref, inView] = useInView()
 
   useEffect(() => {
-    if (inView) {
+    if (isLoaded && inView) {
       controls.start('visible')
     }
-  }, [controls, inView])
+  }, [controls, inView, isLoaded])
 
   return (
     <section className='w-screen h-screen mx-auto'>
