@@ -11,6 +11,7 @@ import { Contact } from "./Contact"
 import Earth from "./canvas/Earth"
 
 import About from "./About";
+import Skills from "./Skills"
 
 const MainContainer = () => {
 
@@ -54,7 +55,9 @@ const MainContainer = () => {
       <About/>
       <Projects />
       <WorkExperience />
+      <Skills />
       <Contact />
+      
     </>
   )
 }
