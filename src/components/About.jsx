@@ -36,8 +36,7 @@ const About = () => {
             <span className="light-blue-text font-semibold"> Me</span>
           </h1>
           <p className="mt-8 mx-3 text-base font-serif">
-            I am aspiring and enthusiast web developer with hands on experience
-            of building webite using the MERN Tech Stack
+          A curious and eager learner, always seeking new experiences in the tech world. With a strong foundation in web development and multiple projects under my belt, I'm an ideal fit for roles in software development, full-stack development, frontend development, and open-source contributions.
           </p>
         </motion.div>
         <div className="absolute flex flex-col bottom-[20%] left-[50%] translate-x-[-50%]">
